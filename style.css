@@ -1,210 +1,451 @@
-/* Remove default browser spacing */
+/* =================================
+   BASIC SETTINGS
+   ================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Whole webpage */
+
 body {
+
     font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
-    color: #222;
+
     line-height: 1.6;
+
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease;
 }
 
 
-/* =========================
-   TOP SECTION
-   ========================= */
+/* =================================
+   HERO SECTION
+   ================================= */
 
 .hero {
-    background-color: #172554;
-    color: white;
-    padding: 60px 10%;
+
+    padding: 70px 8%;
+
 }
 
 
-/* Places text and photo side by side */
 .intro {
+
     max-width: 1100px;
+
     margin: auto;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 
-/* Left side */
 .intro-text {
-    max-width: 650px;
+
+    max-width: 800px;
+
 }
 
 
-/* Small HELLO I'M text */
 .small-text {
-    font-size: 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
     letter-spacing: 3px;
+
     margin-bottom: 10px;
+
 }
 
 
-/* Name */
 .intro h1 {
-    font-size: 50px;
+
+    font-size: 52px;
+
     margin-bottom: 10px;
+
 }
 
 
-/* Course */
 .intro h2 {
-    font-size: 22px;
-    font-weight: normal;
-    margin-bottom: 5px;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+
 }
 
 
-/* Contact information */
 .contact-info {
+
     margin-top: 25px;
+
 }
+
 
 .contact-info p {
-    margin: 5px 0;
+
+    margin-bottom: 5px;
+
 }
 
 
-/* =========================
-   PHOTO
-   ========================= */
-
-.photo {
-    margin-left: 40px;
-}
-
-
-/* Photo itself */
-.photo img {
-    width: 220px;
-    height: 220px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 5px solid white;
-}
-
-
-/* =========================
-   CONTENT SECTIONS
-   ========================= */
+/* =================================
+   GENERAL SECTIONS
+   ================================= */
 
 .section {
+
     max-width: 1000px;
-    margin: 40px auto;
-    padding: 30px;
+
+    margin: 50px auto;
+
+    padding: 0 30px;
+
 }
 
 
-/* Section headings */
 .section h2 {
-    color: #172554;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #172554;
-    padding-bottom: 8px;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #3155d9;
+
 }
 
 
-/* =========================
+.section p {
+
+    font-size: 17px;
+
+}
+
+
+/* =================================
    CARDS
-   ========================= */
+   ================================= */
 
 .card {
-    background-color: white;
-    padding: 25px;
-    margin-top: 15px;
 
-    border-radius: 8px;
+    padding: 30px;
 
-    border-left: 5px solid #172554;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #3155d9;
+
+    transition:
+        background-color 0.5s ease,
+        color 0.5s ease;
+
 }
 
 
-/* Card heading */
 .card h3 {
-    margin-bottom: 8px;
+
+    margin-bottom: 10px;
+
 }
 
 
-/* =========================
+/* =================================
    SKILLS
-   ========================= */
+   ================================= */
 
 .skills {
+
     display: flex;
+
     flex-wrap: wrap;
-    gap: 12px;
+
+    gap: 15px;
+
 }
 
 
-/* Individual skill */
 .skill {
-    background-color: #172554;
-    color: white;
 
-    padding: 10px 18px;
+    padding: 10px 20px;
 
-    border-radius: 5px;
+    border-radius: 6px;
+
+    font-weight: bold;
+
 }
 
 
-/* =========================
+/* =================================
+   CONTACT BUTTON
+   ================================= */
+
+.contact-button {
+
+    margin-top: 20px;
+
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.contact-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =================================
    FOOTER
-   ========================= */
+   ================================= */
 
 footer {
-    background-color: #172554;
-    color: white;
 
     text-align: center;
 
-    padding: 20px;
+    padding: 25px;
+
+    margin-top: 60px;
+
 }
 
 
-/* =========================
-   MOBILE SCREEN
-   ========================= */
+/* =================================
+   DAY MODE
+   6 AM - 5:59 PM
+   ================================= */
+
+body.day {
+
+    background-color: #f4f7ff;
+
+    color: #17213c;
+
+}
+
+
+body.day .hero {
+
+    background-color: #dfe7ff;
+
+}
+
+
+body.day .section h2 {
+
+    color: #2446b8;
+
+}
+
+
+body.day .card {
+
+    background-color: #ffffff;
+
+    color: #17213c;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+
+body.day .card h3 {
+
+    color: #2446b8;
+
+}
+
+
+body.day .skill {
+
+    background-color: #3155d9;
+
+    color: #ffffff;
+
+}
+
+
+body.day .contact-button {
+
+    background-color: #3155d9;
+
+    color: #ffffff;
+
+}
+
+
+body.day footer {
+
+    background-color: #172b63;
+
+    color: #ffffff;
+
+}
+
+
+/* =================================
+   NIGHT MODE
+   6 PM - 5:59 AM
+   ================================= */
+
+body.night {
+
+    background-color: #080b14;
+
+    color: #e8ecff;
+
+}
+
+
+body.night .hero {
+
+    background-color: #111a35;
+
+}
+
+
+body.night .section h2 {
+
+    color: #7da2ff;
+
+}
+
+
+body.night .section p {
+
+    color: #e5e9f5;
+
+}
+
+
+body.night .card {
+
+    background-color: #151c2f;
+
+    color: #e8ecff;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.4);
+
+}
+
+
+body.night .card h3 {
+
+    color: #8eacff;
+
+}
+
+
+body.night .skill {
+
+    background-color: #3155d9;
+
+    color: #ffffff;
+
+}
+
+
+body.night .contact-button {
+
+    background-color: #3155d9;
+
+    color: #ffffff;
+
+}
+
+
+body.night footer {
+
+    background-color: #111a35;
+
+    color: #ffffff;
+
+}
+
+
+/* =================================
+   MOBILE DESIGN
+   ================================= */
 
 @media (max-width: 700px) {
 
+
     .hero {
-        padding: 40px 20px;
+
+        padding: 45px 20px;
+
     }
+
 
     .intro {
-        flex-direction: column-reverse;
+
         text-align: center;
+
     }
 
-    .photo {
-        margin-left: 0;
-        margin-bottom: 25px;
-    }
 
     .intro h1 {
+
         font-size: 38px;
+
     }
+
 
     .intro h2 {
+
         font-size: 18px;
+
     }
 
+
     .section {
-        margin: 20px auto;
+
+        margin: 35px auto;
+
+        padding: 0 20px;
+
+    }
+
+
+    .section h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .card {
+
         padding: 20px;
+
+    }
+
+
+    .skills {
+
+        justify-content: center;
+
     }
 
 }
