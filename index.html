@@ -2,62 +2,235 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Harish Vignesh | Portfolio</title>
 
+    <meta name="description"
+        content="Personal portfolio of Harish Vignesh, B.Tech Computer Science and Engineering student at VIT-AP University.">
+
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-    <!-- =========================
-         HEADER / INTRODUCTION
-         ========================= -->
+    <!-- =========================================
+         SNOW EFFECT
+         ========================================= -->
 
-    <header class="hero">
+    <div id="snow-container"></div>
 
-        <div class="intro">
 
-            <div class="intro-text">
+    <!-- =========================================
+         NAVIGATION BAR
+         ========================================= -->
 
-                <p class="small-text">
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                HV
+            </a>
+
+            <div class="nav-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#education">Education</a>
+
+                <a href="#skills">Skills</a>
+
+                <a href="#projects">Projects</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================
+         HERO / HOME SECTION
+         ========================================= -->
+
+    <header id="home" class="hero">
+
+        <div class="hero-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-content">
+
+                <p class="hello-text">
                     HELLO, I'M
                 </p>
 
-                <h1>
+
+                <!--
+                    NAME
+                    Special hover effect will be added
+                    using CSS and JavaScript.
+                -->
+
+                <h1 id="name-title" class="name-title">
                     Harish Vignesh
                 </h1>
+
 
                 <h2>
                     B.Tech Computer Science and Engineering
                 </h2>
 
-                <p>
+
+                <p class="student-text">
                     1st Year Student at VIT-AP University
                 </p>
 
 
-                <div class="contact-info">
+                <!-- CONTACT INFORMATION -->
+
+                <div class="hero-contact">
 
                     <p>
-                        Email:
+                        <span>Email:</span>
                         harishvignesh2008@gmail.com
                     </p>
 
                     <p>
-                        Phone:
+                        <span>Phone:</span>
                         +91 9384336034
                     </p>
 
                     <p>
-                        Location:
+                        <span>Location:</span>
                         Madurai, Tamil Nadu
+                    </p>
+
+                </div>
+
+
+                <!-- HERO BUTTONS -->
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="primary-button">
+                        View Projects
+                    </a>
+
+
+                    <a href="#contact" class="secondary-button">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE - PROFILE PHOTO -->
+
+            
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         ABOUT SECTION
+         ========================================= -->
+
+    <section id="about" class="section">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                ABOUT
+            </p>
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="section-line"></div>
+
+
+            <div class="about-card">
+
+                <p>
+                    I am a first-year B.Tech Computer Science and
+                    Engineering student at VIT-AP University. I am
+                    interested in programming, web development and
+                    learning new technologies.
+                </p>
+
+                <p>
+                    I enjoy creating simple projects, solving
+                    programming problems and continuously improving
+                    my technical skills. I am currently building my
+                    foundation in programming and exploring different
+                    areas of computer science.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         EDUCATION SECTION
+         ========================================= -->
+
+    <section id="education" class="section">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                EDUCATION
+            </p>
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <div class="section-line"></div>
+
+
+            <div class="education-card">
+
+                <div class="education-icon">
+                    🎓
+                </div>
+
+
+                <div class="education-content">
+
+                    <h3>
+                        VIT-AP University
+                    </h3>
+
+                    <p class="education-course">
+                        B.Tech Computer Science and Engineering
+                    </p>
+
+                    <p>
+                        2026 - 2030
+                    </p>
+
+                    <p class="education-description">
+                        Currently pursuing my first year of
+                        undergraduate studies and developing
+                        a strong foundation in computer science,
+                        programming and technology.
                     </p>
 
                 </div>
@@ -66,84 +239,266 @@
 
         </div>
 
-    </header>
-
-
-    <!-- =========================
-         ABOUT ME
-         ========================= -->
-
-    <section class="section">
-
-        <h2>
-            About Me
-        </h2>
-
-        <p>
-            I am a first-year B.Tech Computer Science and Engineering
-            student at VIT-AP University. I am interested in programming,
-            web development and learning new technologies. I enjoy creating
-            simple projects and improving my technical skills.
-        </p>
-
     </section>
 
 
-    <!-- =========================
-         EDUCATION
-         ========================= -->
+    <!-- =========================================
+         SKILLS SECTION
+         ========================================= -->
 
-    <section class="section">
+    <section id="skills" class="section">
 
-        <h2>
-            Education
-        </h2>
+        <div class="section-container">
 
-        <div class="card">
-
-            <h3>
-                VIT-AP University
-            </h3>
-
-            <p>
-                B.Tech Computer Science and Engineering
+            <p class="section-label">
+                SKILLS
             </p>
 
-            <p>
-                2026 - 2030
-            </p>
+            <h2 class="section-title">
+                Technical Skills
+            </h2>
 
-        </div>
-
-    </section>
+            <div class="section-line"></div>
 
 
-    <!-- =========================
-         SKILLS
-         ========================= -->
+            <div class="skills-grid">
 
-    <section class="section">
 
-        <h2>
-            Skills
-        </h2>
+                <div class="skill-card">
 
-        <div class="skills">
+                    <div class="skill-number">
+                        01
+                    </div>
 
-            <div class="skill">
-                HTML
+                    <h3>
+                        HTML
+                    </h3>
+
+                    <p>
+                        Basic knowledge of creating and
+                        structuring web pages using HTML.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-number">
+                        02
+                    </div>
+
+                    <h3>
+                        CSS
+                    </h3>
+
+                    <p>
+                        Basic knowledge of styling web pages,
+                        layouts, colors and responsive design.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        Programming knowledge including
+                        functions, conditions, loops and modules.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-number">
+                        04
+                    </div>
+
+                    <h3>
+                        C Programming
+                    </h3>
+
+                    <p>
+                        Basic understanding of C programming,
+                        logic building and problem solving.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-number">
+                        05
+                    </div>
+
+                    <h3>
+                        SQL
+                    </h3>
+
+                    <p>
+                        Basic knowledge of databases, tables,
+                        queries and storing structured data.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-number">
+                        06
+                    </div>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Learning version control and using
+                        GitHub to manage and publish projects.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="skill">
-                CSS Basics
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PROJECTS SECTION
+         ========================================= -->
+
+    <section id="projects" class="section">
+
+        <div class="section-container">
+
+            <p class="section-label">
+                PROJECTS
+            </p>
+
+            <h2 class="section-title">
+                My Projects
+            </h2>
+
+            <div class="section-line"></div>
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        PROJECT 01
+                    </span>
+
+                    <span class="project-year">
+                        2026
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Badminton Tournament Management System
+                </h3>
+
+
+                <p>
+                    Developed a Python-based program connected
+                    with SQL to register and manage a badminton
+                    tournament event.
+                </p>
+
+
+                <p>
+                    The system manages player registration,
+                    tournament matches and match results. Python's
+                    random module was used for match-related
+                    operations, and points were updated according
+                    to the results of each match.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        Python
+                    </span>
+
+                    <span>
+                        SQL
+                    </span>
+
+                    <span>
+                        Random Module
+                    </span>
+
+                </div>
+
             </div>
 
-            <div class="skill">
-                Python
-            </div>
 
-            <div class="skill">
-                C Programming
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">
+                        PROJECT 02
+                    </span>
+
+                    <span class="project-year">
+                        2026
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Personal Portfolio Website
+                </h3>
+
+
+                <p>
+                    A professional personal portfolio website
+                    created to present my education, technical
+                    skills, projects and contact information.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                </div>
+
             </div>
 
         </div>
@@ -151,109 +506,112 @@
     </section>
 
 
-    <!-- =========================
-         PROJECTS
-         ========================= -->
+    <!-- =========================================
+         CONTACT SECTION
+         ========================================= -->
 
-    <section class="section">
+    <section id="contact" class="section contact-section">
 
-        <h2>
-            Projects
-        </h2>
+        <div class="section-container">
 
-
-        <div class="card">
-
-            <h3>
-                Personal Portfolio Website
-            </h3>
-
-            <p>
-                A simple personal portfolio website created using HTML,
-                CSS and JavaScript to present my profile, education,
-                skills, projects and contact information.
+            <p class="section-label">
+                CONTACT
             </p>
 
-        </div>
+            <h2 class="section-title">
+                Get In Touch
+            </h2>
+
+            <div class="section-line"></div>
 
 
-        <div class="card">
+            <div class="contact-card">
 
-            <h3>
-                Badminton Tournament Management System
-            </h3>
-
-            <p>
-                Developed a Python program connected with SQL to register
-                and manage a badminton tournament, organize matches using
-                the random module, and update points after each match.
-            </p>
-
-        </div>
-
-    </section>
+                <h3>
+                    Let's Connect
+                </h3>
 
 
-    <!-- =========================
-         CONTACT
-         ========================= -->
-
-    <section class="section">
-
-        <h2>
-            Contact
-        </h2>
+                <p>
+                    If you would like to contact me regarding
+                    opportunities, projects or collaborations,
+                    feel free to send me an email.
+                </p>
 
 
-        <div class="card">
+                <div class="contact-details">
 
-            <p>
-                <strong>Email:</strong>
-                harishvignesh2008@gmail.com
-            </p>
-
-            <p>
-                <strong>Phone:</strong>
-                +91 9384336034
-            </p>
-
-            <p>
-                <strong>Location:</strong>
-                Madurai, Tamil Nadu
-            </p>
+                    <p>
+                        <strong>Email</strong>
+                        <br>
+                        harishvignesh2008@gmail.com
+                    </p>
 
 
-            <!-- Contact Me Button -->
+                    <p>
+                        <strong>Phone</strong>
+                        <br>
+                        +91 9384336034
+                    </p>
 
-            <button
-                id="contactButton"
-                class="contact-button">
 
-                Contact Me
+                    <p>
+                        <strong>Location</strong>
+                        <br>
+                        Madurai, Tamil Nadu
+                    </p>
 
-            </button>
+                </div>
+
+
+                <!--
+                    GMAIL CONTACT BUTTON
+
+                    Clicking this opens Gmail's compose window.
+                    The recipient is already filled with
+                    your email address.
+                -->
+
+                <a
+                    class="contact-button"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=harishvignesh2008@gmail.com&su=Contact%20from%20Portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Send Me an Email
+                </a>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- =========================================
          FOOTER
-         ========================= -->
+         ========================================= -->
 
     <footer>
 
-        <p>
-            © 2026 Harish Vignesh
-        </p>
+        <div class="footer-container">
+
+            <p>
+                © 2026 Harish Vignesh
+            </p>
+
+            <p>
+                B.Tech CSE Student | VIT-AP University
+            </p>
+
+        </div>
 
     </footer>
 
 
-    <!-- =========================
+    <!-- =========================================
          JAVASCRIPT
-         ========================= -->
+         ========================================= -->
 
     <script src="script.js"></script>
 
