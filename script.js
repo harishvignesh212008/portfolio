@@ -11,6 +11,10 @@ const snowContainer = document.getElementById("snow-container");
 
 const nameTitle = document.getElementById("name-title");
 
+const menuToggle = document.getElementById("menu-toggle");
+
+const navLinks = document.getElementById("nav-links");
+
 
 /* =========================================================
    2. AUTOMATIC DAY / NIGHT MODE
@@ -414,7 +418,71 @@ window.addEventListener(
 
 
 /* =========================================================
-   9. CONSOLE MESSAGE
+   9. MOBILE NAVIGATION MENU
+   ========================================================= */
+
+/*
+   On mobile:
+
+   ☰ button = opens the navigation menu.
+
+   Clicking the button again = closes the menu.
+
+   Clicking a navigation link = closes the menu.
+*/
+
+
+if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener(
+        "click",
+        function () {
+
+            navLinks.classList.toggle("active");
+
+        }
+    );
+
+
+    /* Close menu after clicking a navigation link */
+
+    navigationLinks.forEach(function (link) {
+
+        link.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.remove("active");
+
+            }
+        );
+
+    });
+
+
+    /*
+       If the screen becomes large again,
+       automatically close the mobile menu.
+    */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            if (window.innerWidth > 650) {
+
+                navLinks.classList.remove("active");
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   10. CONSOLE MESSAGE
    ========================================================= */
 
 /*
