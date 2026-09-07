@@ -7,80 +7,69 @@
    1. GET HTML ELEMENTS
    ========================================================= */
 
-const snowContainer = document.getElementById("snow-container");
+const snowContainer =
+    document.getElementById("snow-container");
 
-const nameTitle = document.getElementById("name-title");
+const nameTitle =
+    document.getElementById("name-title");
 
-const menuToggle = document.getElementById("menu-toggle");
+const menuToggle =
+    document.getElementById("menu-toggle");
 
-const navLinks = document.getElementById("nav-links");
+const navLinks =
+    document.getElementById("nav-links");
 
 
 /* =========================================================
    2. AUTOMATIC DAY / NIGHT MODE
    ========================================================= */
 
-/*
-   We check the visitor's current local time.
-
-   6:00 AM - 6:00 PM
-   = Day
-
-   6:00 PM - 6:00 AM
-   = Night
-*/
-
 function setDayNightMode() {
 
-    const currentHour = new Date().getHours();
+    const currentHour =
+        new Date().getHours();
 
-    if (currentHour >= 6 && currentHour < 18) {
+    if (
+        currentHour >= 6 &&
+        currentHour < 18
+    ) {
 
-        document.body.classList.add("day-mode");
+        document.body.classList.add(
+            "day-mode"
+        );
 
     } else {
 
-        document.body.classList.remove("day-mode");
+        document.body.classList.remove(
+            "day-mode"
+        );
 
     }
 }
 
-
-/* Run when the website loads */
-
 setDayNightMode();
 
-
-/*
-   Check again every minute.
-
-   This means if someone keeps your portfolio
-   open while the time changes, the website
-   can update its appearance.
-*/
-
-setInterval(setDayNightMode, 60000);
+setInterval(
+    setDayNightMode,
+    60000
+);
 
 
 /* =========================================================
    3. CREATE SNOW
    ========================================================= */
 
-/*
-   Number of snow particles.
-
-   We keep this reasonably small so the
-   website does not become slow.
-*/
-
 const snowCount = 70;
 
 
 function createSnowflake() {
 
-    const snowflake = document.createElement("div");
+    const snowflake =
+        document.createElement("div");
 
-    snowflake.classList.add("snowflake");
+    snowflake.classList.add(
+        "snowflake"
+    );
 
 
     /* Random horizontal position */
@@ -125,21 +114,17 @@ function createSnowflake() {
         Math.random() * 0.6 + 0.3;
 
 
-    /*
-       Add the snowflake to the
-       snow container.
-    */
-
-    snowContainer.appendChild(snowflake);
-
+    snowContainer.appendChild(
+        snowflake
+    );
 }
 
 
-/*
-   Create all snow particles.
-*/
-
-for (let i = 0; i < snowCount; i++) {
+for (
+    let i = 0;
+    i < snowCount;
+    i++
+) {
 
     createSnowflake();
 
@@ -147,20 +132,8 @@ for (let i = 0; i < snowCount; i++) {
 
 
 /* =========================================================
-   4. SPECIAL EFFECT ONLY ON YOUR NAME
+   4. NAME HOVER EFFECT
    ========================================================= */
-
-/*
-   IMPORTANT:
-
-   This effect is attached ONLY to:
-
-       #name-title
-
-   Therefore hovering over other text,
-   buttons or cards will NOT activate it.
-*/
-
 
 if (nameTitle) {
 
@@ -194,15 +167,6 @@ if (nameTitle) {
    5. NAME MOUSE MOVEMENT EFFECT
    ========================================================= */
 
-/*
-   When the mouse moves over your name,
-   the text moves very slightly toward
-   the mouse.
-
-   This creates a subtle professional
-   interactive effect.
-*/
-
 if (nameTitle) {
 
     nameTitle.addEventListener(
@@ -212,30 +176,23 @@ if (nameTitle) {
             const rect =
                 nameTitle.getBoundingClientRect();
 
-
             const x =
                 event.clientX - rect.left;
-
 
             const y =
                 event.clientY - rect.top;
 
-
             const centerX =
                 rect.width / 2;
-
 
             const centerY =
                 rect.height / 2;
 
-
             const moveX =
                 (x - centerX) / 18;
 
-
             const moveY =
                 (y - centerY) / 18;
-
 
             nameTitle.style.transform =
                 `translate(${moveX}px, ${moveY}px)`;
@@ -258,7 +215,7 @@ if (nameTitle) {
 
 
 /* =========================================================
-   6. SMOOTH SCROLLING FOR NAVIGATION
+   6. SMOOTH SCROLLING
    ========================================================= */
 
 const navigationLinks =
@@ -267,54 +224,48 @@ const navigationLinks =
     );
 
 
-navigationLinks.forEach(function (link) {
+navigationLinks.forEach(
+    function (link) {
 
-    link.addEventListener(
-        "click",
-        function (event) {
+        link.addEventListener(
+            "click",
+            function (event) {
 
-            const targetId =
-                link.getAttribute("href");
+                const targetId =
+                    link.getAttribute("href");
 
+                if (
+                    targetId &&
+                    targetId.startsWith("#")
+                ) {
 
-            if (
-                targetId &&
-                targetId.startsWith("#")
-            ) {
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
 
-                const target =
-                    document.querySelector(
-                        targetId
-                    );
+                    if (target) {
 
+                        event.preventDefault();
 
-                if (target) {
+                        target.scrollIntoView({
+                            behavior: "smooth"
+                        });
 
-                    event.preventDefault();
-
-
-                    target.scrollIntoView({
-                        behavior: "smooth"
-                    });
+                    }
 
                 }
 
             }
+        );
 
-        }
-    );
-
-});
+    }
+);
 
 
 /* =========================================================
    7. SCROLL REVEAL EFFECT
    ========================================================= */
-
-/*
-   Cards will gently appear when the
-   visitor scrolls down the page.
-*/
 
 const revealElements =
     document.querySelectorAll(
@@ -326,21 +277,25 @@ const revealObserver =
     new IntersectionObserver(
         function (entries) {
 
-            entries.forEach(function (entry) {
+            entries.forEach(
+                function (entry) {
 
-                if (entry.isIntersecting) {
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-                    entry.target.classList.add(
-                        "show"
-                    );
+                        entry.target.classList.add(
+                            "show"
+                        );
 
-                    revealObserver.unobserve(
-                        entry.target
-                    );
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
 
                 }
-
-            });
+            );
 
         },
         {
@@ -349,21 +304,20 @@ const revealObserver =
     );
 
 
-revealElements.forEach(function (element) {
+revealElements.forEach(
+    function (element) {
 
-    revealObserver.observe(element);
+        revealObserver.observe(
+            element
+        );
 
-});
+    }
+);
 
 
 /* =========================================================
-   8. PREVENT UNNECESSARY SNOW ON VERY SMALL DEVICES
+   8. REDUCE SNOW ON SMALL DEVICES
    ========================================================= */
-
-/*
-   On smaller screens we reduce the amount
-   of snow so the website remains smooth.
-*/
 
 function adjustSnowForScreen() {
 
@@ -376,9 +330,14 @@ function adjustSnowForScreen() {
     if (window.innerWidth < 500) {
 
         snowflakes.forEach(
-            function (snowflake, index) {
+            function (
+                snowflake,
+                index
+            ) {
 
-                if (index % 2 === 0) {
+                if (
+                    index % 2 === 0
+                ) {
 
                     snowflake.style.display =
                         "none";
@@ -404,12 +363,8 @@ function adjustSnowForScreen() {
 }
 
 
-/* Run when page loads */
-
 adjustSnowForScreen();
 
-
-/* Run when screen size changes */
 
 window.addEventListener(
     "resize",
@@ -418,60 +373,55 @@ window.addEventListener(
 
 
 /* =========================================================
-   9. MOBILE NAVIGATION MENU
+   9. MOBILE NAVIGATION
    ========================================================= */
 
-/*
-   On mobile:
-
-   ☰ button = opens the navigation menu.
-
-   Clicking the button again = closes the menu.
-
-   Clicking a navigation link = closes the menu.
-*/
-
-
-if (menuToggle && navLinks) {
+if (
+    menuToggle &&
+    navLinks
+) {
 
     menuToggle.addEventListener(
         "click",
         function () {
 
-            navLinks.classList.toggle("active");
+            navLinks.classList.toggle(
+                "active"
+            );
 
         }
     );
 
 
-    /* Close menu after clicking a navigation link */
+    navigationLinks.forEach(
+        function (link) {
 
-    navigationLinks.forEach(function (link) {
+            link.addEventListener(
+                "click",
+                function () {
 
-        link.addEventListener(
-            "click",
-            function () {
+                    navLinks.classList.remove(
+                        "active"
+                    );
 
-                navLinks.classList.remove("active");
+                }
+            );
 
-            }
-        );
+        }
+    );
 
-    });
-
-
-    /*
-       If the screen becomes large again,
-       automatically close the mobile menu.
-    */
 
     window.addEventListener(
         "resize",
         function () {
 
-            if (window.innerWidth > 650) {
+            if (
+                window.innerWidth > 650
+            ) {
 
-                navLinks.classList.remove("active");
+                navLinks.classList.remove(
+                    "active"
+                );
 
             }
 
@@ -484,13 +434,6 @@ if (menuToggle && navLinks) {
 /* =========================================================
    10. CONSOLE MESSAGE
    ========================================================= */
-
-/*
-   This is only for development.
-
-   It helps us know that JavaScript
-   loaded correctly.
-*/
 
 console.log(
     "Harish Vignesh Portfolio - JavaScript loaded successfully."
